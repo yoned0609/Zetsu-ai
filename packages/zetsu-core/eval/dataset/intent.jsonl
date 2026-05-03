@@ -1,0 +1,7 @@
+{"text": "Honestly I'm not sure which option to pick — we're stalled.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "決まらないのでアドバイスください。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "I'm stuck on the architecture choice between approach A and B. Don't know which trade-off matters more.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Sounds good, ship it.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Thanks for the update — looks fine.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Lunch at noon?", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "了解です、進めましょう。", "expectedMode": "passive", "expectedAxis": "intent"}

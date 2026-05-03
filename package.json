@@ -1,0 +1,20 @@
+{
+  "name": "zetsu-ai",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Zetsu.ai monorepo — invisible intelligence platform (zetsu-core, Absentia, Cameleon, Jidoka loop).",
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "eval:dry-run": "turbo run eval:dry-run"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  }
+}
