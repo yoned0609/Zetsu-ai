@@ -8,6 +8,8 @@ Invisible intelligence platform. Two flagship products powered by a shared scori
 
 This monorepo currently contains **Phase 0**: `packages/zetsu-core`, the shared LLM-driven scoring engine that classifies inputs along two axes — **Intent** (need for support) and **Malice** (hostile behavior) — and applies the Jidoka mode-switch.
 
+**Phase 0 signed off 2026-05-10** against `claude-sonnet-4-6` on the 200-row labeled set: intent precision 100%, malice precision 100%, malice recall 98%. See [`packages/zetsu-core/eval/RESULTS.md`](packages/zetsu-core/eval/RESULTS.md) and the `v0.1.0-phase0` tag.
+
 ## Quick start
 
 ```bash
