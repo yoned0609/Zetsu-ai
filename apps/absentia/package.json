@@ -13,6 +13,7 @@
     "start:mock": "tsx src/index.ts --mock"
   },
   "dependencies": {
+    "@slack/bolt": "^4.0.0",
     "@zetsu/core": "workspace:*"
   },
   "devDependencies": {
