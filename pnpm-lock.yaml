@@ -15,6 +15,25 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
 
+  apps/absentia:
+    dependencies:
+      '@zetsu/core':
+        specifier: workspace:*
+        version: link:../../packages/zetsu-core
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.19.17
+      tsx:
+        specifier: ^4.19.2
+        version: 4.21.0
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vitest:
+        specifier: ^2.1.8
+        version: 2.1.9(@types/node@22.19.17)
+
   packages/zetsu-core:
     dependencies:
       '@anthropic-ai/sdk':

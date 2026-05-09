@@ -60,4 +60,23 @@ describe("score()", () => {
     const r = await score({ text: "x" }, { llm });
     expect(r.modelId).toMatch(/^mock:/);
   });
+
+  it("preserves the hint field when the LLM returns one", async () => {
+    const llm = fixed(
+      JSON.stringify({
+        intent: 85,
+        malice: 5,
+        rationale: "asker stalled",
+        hint: "Try sketching the failing case in a thread.",
+      }),
+    );
+    const r = await score({ text: "x" }, { llm });
+    expect(r.score.hint).toBe("Try sketching the failing case in a thread.");
+  });
+
+  it("leaves hint undefined when the LLM omits it", async () => {
+    const llm = fixed(JSON.stringify({ intent: 30, malice: 10, rationale: "x" }));
+    const r = await score({ text: "x" }, { llm });
+    expect(r.score.hint).toBeUndefined();
+  });
 });

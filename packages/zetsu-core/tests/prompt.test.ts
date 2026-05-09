@@ -29,4 +29,9 @@ describe("SYSTEM_PROMPT", () => {
     expect(SYSTEM_PROMPT).toMatch(/intent/);
     expect(SYSTEM_PROMPT).toMatch(/malice/);
   });
+  it("describes the optional hint field as nudge-only, not an answer", () => {
+    expect(SYSTEM_PROMPT).toMatch(/hint/);
+    expect(SYSTEM_PROMPT).toMatch(/optional/i);
+    expect(SYSTEM_PROMPT).toMatch(/without answering|not.*direct answer|no.*solution/i);
+  });
 });

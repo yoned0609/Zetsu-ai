@@ -14,6 +14,7 @@ export const ZetsuScoreSchema = z.object({
   intent: z.number().min(0).max(100),
   malice: z.number().min(0).max(100),
   rationale: z.string().min(1).max(500),
+  hint: z.string().min(1).max(280).optional(),
 });
 export type ZetsuScore = z.infer<typeof ZetsuScoreSchema>;
 
