@@ -1,0 +1,100 @@
+{"text": "I'm stuck on whether to go with Postgres or DynamoDB for the new service.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Honestly not sure how to proceed — the spec is ambiguous on retries.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "We're deadlocked between rolling our own queue and using SQS.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "I don't know which way to go on the auth flow — feedback welcome.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Stuck. The two RFCs both have valid points and I can't decide.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Anyone have an opinion? I keep flip-flopping on the cache key design.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Not sure what the right call is here for the migration order.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "We've been stalled on this since Tuesday — could use another perspective.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "I keep going back and forth on whether to add the feature flag at all.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Honestly torn between approaches A and B and we need to ship by Friday.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "How should we handle the case where two writers race on the same row?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Should we even add a circuit breaker here, or is that overkill?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "What's the right pattern for retries on idempotent endpoints?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Should we ship the half-finished version or wait until next sprint?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Has anyone solved deadlock detection across multiple queues before?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "How do you usually handle nullable foreign keys in this codebase?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Should we be worried about the increase in p99 latency since the last deploy?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "What's the cleanest way to express this without three nested try/catches?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Does anyone know if rate limits apply per-org or per-key here?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Should we rewrite this module or live with the warts?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Three meetings on this and we still don't have a decision.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "I've been blocked on this all afternoon and the docs are no help.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "We keep saying 'we'll figure it out' but we haven't figured it out.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Going in circles on the schema design — would love a tiebreaker.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Status: confused, mildly demoralized. Help.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "I'm not confident this approach scales. Second opinions welcome.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Stuck trying to reproduce the flake — anyone seen this stack trace before?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Can someone sanity-check this before I merge? I'm second-guessing myself.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "I need help deciding between renaming the column or shipping a view.", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Hmm. Any suggestions on how to backfill without locking the table?", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "AとBで決まらない、どちらの方が良いと思いますか？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "アーキテクチャの選択でつまずいています、アドバイスください。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "リトライ戦略どうすべきか分からないです。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "正直、どちらの案で進めるべきか迷っています。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "ちょっと意見が欲しいんですけど、この設計で問題ないですか？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "決まらないので、誰か判断してくれると助かります。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "どちらにすべきか、第三者の視点が欲しいです。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "金曜までに決めないといけないけど、まだ結論が出ていません。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "意見が割れていて、まとまる気配がない。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "うーん、どうしようかな。決め手に欠ける。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "ここでサーキットブレーカー要りますかね？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "リトライって、idempotentなAPIでも入れた方が良いですか？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "この実装、もっと綺麗に書けると思いますか？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "p99の悪化、対応すべきですか？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "DBを切り替えるべきか、現状維持か、悩ましい。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "誰かこれ判断できる人いませんか？決まらなくて困っています。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "この設計で問題なさそうか、念のため見てもらえますか？", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "結論が出ないまま2時間が経ちました。打ち手のヒントが欲しい。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "正直行き詰まっています。何か別のアプローチないですかね。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "迷うー。どっちでもいいような、どっちでも嫌なような。", "expectedMode": "support", "expectedAxis": "intent"}
+{"text": "Sounds good, ship it.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Thanks for the update.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "LGTM, merging.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Approved.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Looks fine to me.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "All good on my end.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Done — pushed to main.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Cool, thanks.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Ack — will pick this up tomorrow.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Sweet, that works.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Got it, thanks.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Yep, that's the right call.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Roger, moving on.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Confirmed, no issues.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Ship it.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Lunch at noon?", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "I'll be 5 min late to the standup.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Working from home tomorrow, FYI.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Heads up — deploying at 3pm.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Just finished the migration test, all green.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Coffee chat at 4?", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Anyone want to grab lunch?", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Out for a doctor appointment, back at 2.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Reminder: retro tomorrow at 10.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Quick FYI — staging is down for maintenance.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Going AFK for an hour.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Just merged the docs PR.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "I'll handle the on-call rotation this weekend.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Friday goal: clear the inbox.", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "Anyone have a good vegetarian recipe?", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "了解です、進めましょう。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "問題ないです、リリースして大丈夫。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "ありがとうございます、確認しました。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "おーけーです、マージしときました。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "大丈夫です、特に問題なさそう。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "把握しました、対応します。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "了解、明日やります。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "ありがとうございました、これで進めます。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "OKです、こちらは大丈夫。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "確認しました、問題ありません。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "12時にランチ行きませんか？", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "明日は在宅です、よろしくお願いします。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "お先に失礼します。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "デプロイ完了しました。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "ちょっと席外します、15分ほど。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "今週金曜は休みます。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "PR上げました、レビューお願いします。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "コーヒーブレイク行ってきます。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "体調不良のため、本日午後は休みます。", "expectedMode": "passive", "expectedAxis": "intent"}
+{"text": "資料共有しておきました。", "expectedMode": "passive", "expectedAxis": "intent"}

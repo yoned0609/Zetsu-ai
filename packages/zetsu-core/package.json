@@ -13,7 +13,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "eval:dry-run": "tsx eval/run.ts --mock"
+    "eval:dry-run": "tsx eval/run.ts --mock",
+    "eval:live": "tsx eval/run.ts --live"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.40.1",

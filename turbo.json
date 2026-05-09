@@ -14,6 +14,11 @@
     "eval:dry-run": {
       "dependsOn": ["^build"],
       "cache": false
+    },
+    "eval:live": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "env": ["ANTHROPIC_API_KEY"]
     }
   }
 }
