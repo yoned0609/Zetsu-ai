@@ -79,4 +79,14 @@ describe("score()", () => {
     const r = await score({ text: "x" }, { llm });
     expect(r.score.hint).toBeUndefined();
   });
+
+  it("accepts a null hint without falling back to passive", async () => {
+    const llm = fixed(
+      JSON.stringify({ intent: 2, malice: 97, rationale: "sqli", hint: null }),
+    );
+    const r = await score({ text: "x" }, { llm });
+    expect(r.mode).toBe("mimicry");
+    expect(r.score.malice).toBe(97);
+    expect(r.score.hint).toBeNull();
+  });
 });

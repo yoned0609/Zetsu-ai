@@ -43,22 +43,40 @@ backpressure is a Phase 2 problem.
 
 ## Slack app setup
 
-1. https://api.slack.com/apps → **Create New App** → From scratch. Pick a dev workspace.
-2. **Socket Mode** → enable. Generate an App-Level Token with the
-   `connections:write` scope. Save it as `SLACK_APP_TOKEN` (`xapp-...`).
-3. **OAuth & Permissions** → add Bot Token Scopes:
-   - `chat:write`
-   - `chat:write.public` (optional, lets the bot post in unjoined public channels)
-   - `channels:history`, `groups:history`, `im:history`, `mpim:history`
-4. **Install to Workspace** → copy the Bot User OAuth Token (`xoxb-...`).
-   Save as `SLACK_BOT_TOKEN`.
-5. **Event Subscriptions** → enable. Subscribe to bot events:
-   `message.channels`, `message.groups`, `message.im`, `message.mpim`.
-6. Invite the bot into the channel(s) you want covered: `/invite @<your-bot>`.
-7. Pick a channel for mimicry alerts (right-click the channel → Copy link →
-   the `C...` segment is the ID). Set `SLACK_ALERT_CHANNEL_ID`. If unset,
-   alerts are skipped with a stderr warning.
-8. Run with all three Slack vars + `ANTHROPIC_API_KEY` set.
+The fastest path is to create the app from the bundled manifest — every
+scope and event subscription is already declared. Files:
+
+- `apps/absentia/slack-manifest.yaml` — paste into the YAML tab
+- `apps/absentia/slack-manifest.json` — paste into the JSON tab (fallback
+  if YAML parsing rejects the input)
+
+Steps:
+
+1. https://api.slack.com/apps → **Create New App** → **From an app manifest**.
+   Pick a dev workspace, paste the manifest, click **Next** → **Create**.
+2. **Basic Information** → **App-Level Tokens** → **Generate Token and
+   Scopes**. Add the `connections:write` scope. Copy the resulting
+   `xapp-...` value as `SLACK_APP_TOKEN`.
+3. **OAuth & Permissions** → **Install to Workspace**. Copy the Bot User
+   OAuth Token (`xoxb-...`) as `SLACK_BOT_TOKEN`.
+4. In the Slack client, open the channel you want as the alert sink.
+   Channel header → scroll to bottom of the modal → copy the `C...`
+   Channel ID. Set it as `SLACK_ALERT_CHANNEL_ID`. If left unset, alerts
+   are skipped with a stderr warning.
+5. In every channel Absentia should listen to (including the alert
+   channel, so it can post there): `/invite @zetsu_absentia`. The bot
+   only receives `message.*` events from channels it has joined.
+6. Run with all three Slack vars + `ANTHROPIC_API_KEY` set. If events
+   aren't flowing, set `ABSENTIA_DEBUG_SLACK=1` to see the full Bolt
+   debug stream.
+
+## Operational debugging
+
+Set `ABSENTIA_DEBUG_SLACK=1` alongside the Slack tokens to flip Bolt's
+internal logger to `LogLevel.DEBUG`. You then see the full Socket Mode
+event stream (auth handshake, WebSocket frames, every event payload, ack
+calls, web-api HTTP traffic) on stderr — useful when wiring a new
+workspace or chasing missing-event issues. Off by default.
 
 ## Test
 

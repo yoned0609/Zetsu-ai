@@ -5,6 +5,7 @@ import {
   heuristicMock,
   type LLMClient,
 } from "@zetsu/core";
+import { LogLevel } from "@slack/bolt";
 import { WebClient } from "@slack/web-api";
 import { LogActionDispatcher } from "./adapters/log.js";
 import { SlackActionDispatcher } from "./adapters/slack.js";
@@ -36,7 +37,12 @@ async function main() {
   let slackSource: SlackMessageSource | null = null;
 
   if (useSlack && slackBotToken && slackAppToken) {
-    slackSource = new SlackMessageSource({ botToken: slackBotToken, appToken: slackAppToken });
+    const debugSlack = process.env["ABSENTIA_DEBUG_SLACK"] === "1";
+    slackSource = new SlackMessageSource({
+      botToken: slackBotToken,
+      appToken: slackAppToken,
+      ...(debugSlack ? { logLevel: LogLevel.DEBUG } : {}),
+    });
     await slackSource.start();
     source = slackSource;
     const alertChannelId = process.env["SLACK_ALERT_CHANNEL_ID"];

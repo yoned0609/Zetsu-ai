@@ -20,7 +20,13 @@ export interface PipelineDeps {
 
 export async function runPipeline(deps: PipelineDeps): Promise<void> {
   for await (const msg of deps.source.messages()) {
-    const { action } = await handleMessage(msg, deps.llm);
-    await deps.dispatcher.dispatch(action);
+    try {
+      const { action } = await handleMessage(msg, deps.llm);
+      await deps.dispatcher.dispatch(action);
+    } catch (err) {
+      process.stderr.write(
+        `absentia: pipeline error on msg ${msg.id}: ${err instanceof Error ? err.message : String(err)}\n`,
+      );
+    }
   }
 }

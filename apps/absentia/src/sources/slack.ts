@@ -1,10 +1,11 @@
-import { App } from "@slack/bolt";
+import { App, LogLevel } from "@slack/bolt";
 import type { IncomingMessage, MessageSource } from "../ports.js";
 import { AsyncQueue } from "../util/async-queue.js";
 
 export interface SlackSourceDeps {
   botToken: string;
   appToken: string;
+  logLevel?: LogLevel;
 }
 
 export class SlackMessageSource implements MessageSource {
@@ -16,6 +17,7 @@ export class SlackMessageSource implements MessageSource {
       token: deps.botToken,
       appToken: deps.appToken,
       socketMode: true,
+      ...(deps.logLevel !== undefined ? { logLevel: deps.logLevel } : {}),
     });
 
     this.app.message(async ({ message }) => {
